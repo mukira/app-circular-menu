@@ -1,0 +1,57 @@
+/**
+ * Style
+ *
+ */
+
+/* Reset */
+body {
+  margin: 0;
+  background: #1b1b1b;
+}
+
+.controller {
+  position: absolute;
+  width: 300px;
+  bottom: 90px;
+  left: 50%;
+  z-index: 100;
+  margin-left: -150px;
+}
+
+/**
+ * Circular menu style
+ * 
+ * A menu got 2 states: default (hidden) and visible.
+ * It contain a .center element and 8 .options
+ *
+ * Options and center can be .selected and options
+ * can be active.
+ *
+ */
+.circular-menu {width: 300px; height: 300px;}
+
+.circular-menu .center { fill: rgba(255,255,255,0.25); }
+.circular-menu .option { display: none; }
+.circular-menu .option .surface { fill: #000000; fill-opacity: 0.25; }
+.circular-menu .option .border  { fill: #ffffff; fill-opacity: 0.125; }
+
+.circular-menu.visible .center          { fill: #ffffff; fill-opacity: 0.125; }
+.circular-menu.visible .center.selected { fill-opacity: 0.75; stroke: #ff5500; stroke-width: 2px; }
+
+.circular-menu.visible .option { display: inherit; }
+.circular-menu.visible .option          .icon    { fill: #ffffff; }
+.circular-menu.visible .option.active   .surface { fill: #ff5500; fill-opacity: 0.75; }
+.circular-menu.visible .option.selected .surface { fill: #000000; fill-opacity: 0.75; }
+.circular-menu.visible .option.selected .border  { fill: #ff5500; fill-opacity: 1; -webkit-filter: blur(0.25px); filter: blur(0.25px); }
+
+/**
+ * Promptr
+ * A simple line under the menu
+ */
+.promptr {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: center;
+  color: #ffffff;
+}
