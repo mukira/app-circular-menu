@@ -4,6 +4,10 @@
  */
 
 /* Reset */
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: #1b1b1b;
